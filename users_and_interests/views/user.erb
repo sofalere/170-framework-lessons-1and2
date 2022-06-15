@@ -1,0 +1,13 @@
+<h2><%= @username.to_s.upcase %></h2>
+
+<p>email: <%= @info[:email].to_s %></p>
+
+<p>likes: <%= @info[:interests].join(", ")%></p>
+
+<div>
+	<% each_user do |usr_name| %>
+		<% unless usr_name == @username %>
+		<a href=<%= "/#{usr_name}"%>><%= usr_name.to_s %></a>
+		<% end %>
+	<% end %>
+</div>

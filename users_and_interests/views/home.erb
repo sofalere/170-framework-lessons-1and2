@@ -1,0 +1,5 @@
+<ul>
+    <% @names.each do |name| %>
+    <li><a href=<%= "/#{name}"%>><%= name.to_s %></a></li>
+    <% end %>
+</ul>
